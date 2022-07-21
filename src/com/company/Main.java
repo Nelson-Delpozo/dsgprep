@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        reverseWords("there is a light that never goes out");
+        reverseWords("<[] there is a light that never goes out");
     }
 
     public static void reverseWords(final String original) {
