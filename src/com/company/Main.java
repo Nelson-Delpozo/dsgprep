@@ -1,16 +1,35 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        reverseWords("hello");
+        reverseWords("hello my friend");
     }
 
-    public static String reverseWords(final String original) {
-//        return "hello";
-//        System.out.println(original);
-        return original;
+    public static void reverseWords(final String original) {
+
+        char ch;
+        String[] split = original.split("\\s+");
+        List<String> wordsReversed = new ArrayList<>();
+
+
+        for (String word : split) {
+            String newString = " ";
+            for (int i = word.length() - 1; i >= 0; i--) {
+
+                ch = word.charAt(i); //extracts each character
+                newString = newString + ch;
+                wordsReversed.add(newString);
+            }
+        }
+
+        System.out.println(Arrays.toString(split));
+        System.out.println(wordsReversed);
 
     }
 }
