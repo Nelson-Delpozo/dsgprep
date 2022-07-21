@@ -8,14 +8,14 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        reverseWords("hello my friend");
+        reverseWords("there is a light that never goes out");
     }
 
     public static void reverseWords(final String original) {
 
         char ch;
         String[] split = original.split("\\s+");
-        List<String> wordsReversed = new ArrayList<>();
+        ArrayList<String> wordsReversed = new ArrayList<>();
 
 
         for (String word : split) {
@@ -39,4 +39,30 @@ public class Main {
 
 
     }
+
+//    public static String reverseWords(final String original) {
+//
+//        char ch;
+//        String[] split = original.split("\\s+");
+//        List<String> wordsReversed = new ArrayList<>();
+//
+//
+//        for (String word : split) {
+//            String newString = "";
+//            for (int i = word.length() - 1; i >= 0; i--) {
+//
+//                ch = word.charAt(i); //extracts each character
+//                newString = newString + ch;
+//
+//            }
+//            wordsReversed.add(newString);
+//        }
+//        String finalString = "";
+//        for (String words : wordsReversed){
+//            finalString = finalString + " " + words;
+//        }
+//
+//        return finalString;
+//
+//    }
 }
