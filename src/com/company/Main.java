@@ -19,17 +19,24 @@ public class Main {
 
 
         for (String word : split) {
-            String newString = " ";
+            String newString = "";
             for (int i = word.length() - 1; i >= 0; i--) {
 
                 ch = word.charAt(i); //extracts each character
                 newString = newString + ch;
-                wordsReversed.add(newString);
+
             }
+            wordsReversed.add(newString);
+        }
+        String finalString = "";
+        for (String words : wordsReversed){
+           finalString = finalString + " " + words;
         }
 
         System.out.println(Arrays.toString(split));
         System.out.println(wordsReversed);
+        System.out.println(finalString);
+
 
     }
 }
