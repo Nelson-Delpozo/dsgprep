@@ -3,12 +3,14 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.lang.StringBuilder;
 
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
         reverseWords("<[] there is a light that never goes out");
+        reverseWords2("<[] there is a light that never goes out");
     }
 
     public static void reverseWords(final String original) {
@@ -65,4 +67,20 @@ public class Main {
 //        return finalString;
 //
 //    }
-}
+
+
+
+        public static void reverseWords2(final String original)
+        {
+            String[] array = original.split(" ");
+
+            int i = 0;
+            for(String string : array){
+                array[i] = new StringBuilder(string).reverse().toString();
+                i++;
+            }
+
+            System.out.println("String.join(\" \",array) = " + String.join(" ", array));
+        }
+    }
+
