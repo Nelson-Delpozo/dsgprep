@@ -31,8 +31,8 @@ public class Main {
             wordsReversed.add(newString);
         }
         String finalString = "";
-        for (String words : wordsReversed){
-           finalString = finalString + " " + words;
+        for (String words : wordsReversed) {
+            finalString = finalString + " " + words;
         }
 
         System.out.println(Arrays.toString(split));
@@ -68,19 +68,16 @@ public class Main {
 //
 //    }
 
+    public static void reverseWords2(final String original) {
+        String[] array = original.split(" ");
 
-
-        public static void reverseWords2(final String original)
-        {
-            String[] array = original.split(" ");
-
-            int i = 0;
-            for(String string : array){
-                array[i] = new StringBuilder(string).reverse().toString();
-                i++;
-            }
-
-            System.out.println("String.join(\" \",array) = " + String.join(" ", array));
+        int i = 0;
+        for (String string : array) {
+            array[i] = new StringBuilder(string).reverse().toString();
+            i++;
         }
+
+        System.out.println(String.join(" ", array));
     }
+}
 
