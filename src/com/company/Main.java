@@ -97,3 +97,26 @@ public class Main {
     }
 }
 
+//    int solution(int[] a, int k) {
+//
+//
+//        Arrays.sort(a);
+//        int l = 1;
+//        int r = a[a.length - 1];
+//        int res = -1;
+//        while (l <= r) {
+//            int mid = l + (r - l) / 2;
+//            int sum = 0;
+//            for (int i = 0; i < a.length; i++) {
+//                int cnt = a[i] / mid;
+//                sum += cnt;
+//            }
+//            if (sum >= k) {
+//                res = mid;
+//                l = mid + 1;
+//            } else {
+//                r = mid - 1;
+//            }
+//        }
+//        return res;
+//    }
