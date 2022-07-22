@@ -1,5 +1,6 @@
 package com.company;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,9 +10,10 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        reverseWords("<[] there is a light that never goes out");
-        reverseWords2("<[] there is a light that never goes out");
-        whoLikesIt("mike", "joe", "bobby", "stan");
+//        reverseWords("<[] there is a light that never goes out");
+//        reverseWords2("<[] there is a light that never goes out");
+//        whoLikesIt("mike", "joe", "bobby", "stan");
+        toJadenCase("what is going on here");
     }
 
     public static void reverseWords(final String original) {
@@ -94,6 +96,16 @@ public class Main {
         } else {
             System.out.println(names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this");
         }
+    }
+
+    public static void toJadenCase(String phrase) {
+        String[] array = phrase.split(" ");
+        ArrayList<String> words = new ArrayList<>();
+        for (String word : array) {
+            String s = word.substring(0, 1).toUpperCase() + word.substring(1);
+            words.add(s);
+        }
+        System.out.println(String.join(" ", words));
     }
 }
 
