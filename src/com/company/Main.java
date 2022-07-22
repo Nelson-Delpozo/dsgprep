@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.lang.StringBuilder;
+import java.util.Locale;
 
 public class Main {
 
@@ -117,6 +118,30 @@ public class Main {
         return (String.join(" ", words));
     }
 
+    public static boolean getXO (String str) {
+
+        ArrayList<String> x = new ArrayList<>();
+        ArrayList<String> o = new ArrayList<>();
+        String[] characters = str.split("");
+        for (String character : characters) {
+            if (character.toLowerCase() == "o") {
+                o.add(character);
+            } else if (character.toLowerCase() == "x") {
+                x.add(character);
+            }
+
+        }
+        return (x.size() == o.size());
+    }
+
+
+
+
+
+
+
+
+//end of main class
 }
 
 //    int solution(int[] a, int k) {
