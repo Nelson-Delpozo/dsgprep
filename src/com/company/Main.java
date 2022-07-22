@@ -13,7 +13,7 @@ public class Main {
 //        reverseWords("<[] there is a light that never goes out");
 //        reverseWords2("<[] there is a light that never goes out");
 //        whoLikesIt("mike", "joe", "bobby", "stan");
-        toJadenCase("what is going on here");
+        System.out.println(toJadenCase("what is going on here"));
     }
 
     public static void reverseWords(final String original) {
@@ -98,15 +98,25 @@ public class Main {
         }
     }
 
-    public static void toJadenCase(String phrase) {
+    public static String toJadenCase(String phrase) {
+        if(phrase == null){
+            return null;
+        }
+        if(phrase == ""){
+            return null;
+        }
+
         String[] array = phrase.split(" ");
+
+
         ArrayList<String> words = new ArrayList<>();
         for (String word : array) {
             String s = word.substring(0, 1).toUpperCase() + word.substring(1);
             words.add(s);
         }
-        System.out.println(String.join(" ", words));
+        return (String.join(" ", words));
     }
+
 }
 
 //    int solution(int[] a, int k) {
