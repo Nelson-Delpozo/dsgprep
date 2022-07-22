@@ -11,6 +11,7 @@ public class Main {
         // write your code here
         reverseWords("<[] there is a light that never goes out");
         reverseWords2("<[] there is a light that never goes out");
+        whoLikesIt("mike", "joe", "bobby", "stan");
     }
 
     public static void reverseWords(final String original) {
@@ -78,6 +79,21 @@ public class Main {
         }
 
         System.out.println(String.join(" ", array));
+    }
+
+    public static void whoLikesIt(String... names) {
+
+        if (names.length == 0) {
+            System.out.println("no one likes this");
+        } else if (names.length == 1) {
+            System.out.println(names[0] + " likes this");
+        } else if (names.length == 2) {
+            System.out.println(names[0] + " and " + names[1] + " like this");
+        } else if (names.length == 3) {
+            System.out.println(names[0] + ", " + names[1] + " and " + names[2] + " like this");
+        } else {
+            System.out.println(names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this");
+        }
     }
 }
 
