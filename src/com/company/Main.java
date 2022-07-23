@@ -1,10 +1,8 @@
 package com.company;
 
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.lang.StringBuilder;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +15,8 @@ public class Main {
 //        whoLikesIt("mike", "joe", "bobby", "stan");
 //        System.out.println(toJadenCase("what is going on here"));
 //        System.out.println(getXO("xooxXXoohj"));
-        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
-
+//        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
+        System.out.println(makeComplement("ATTGC"));
     }
 
     public static void reverseWords(final String original) {
@@ -139,29 +137,48 @@ public class Main {
 
     public static int[] arrayDiff(int[] a, int[] b) {
 
-       List<Integer> listA = new ArrayList<>();
-       List<Integer> listB = new ArrayList<>();
+        List<Integer> listA = new ArrayList<>();
+        List<Integer> listB = new ArrayList<>();
 
-       for(int num : a){
-           listA.add(num);
-       }
-       for(int num : b){
-           listB.add(num);
-       }
-       listA.removeAll(listB);
-       int[] result = new int[listA.size()];
+        for (int num : a) {
+            listA.add(num);
+        }
+        for (int num : b) {
+            listB.add(num);
+        }
+        listA.removeAll(listB);
+        int[] result = new int[listA.size()];
 
-       for(int i = 0; i < listA.size(); i++){
-           result[i] = listA.get(i);
-       }
-       return result;
+        for (int i = 0; i < listA.size(); i++) {
+            result[i] = listA.get(i);
+        }
+        return result;
     }
 
     public static String makeComplement(String dna) {
 
+        String[] string = dna.split("");
+        System.out.println(Arrays.toString(string));
 
+        for (int i = 0; i < string.length; i++) {
+
+            if (string[i].equals("G")){
+                string[i] = "C";
+            }
+            if (string[i].equals("C")){
+                string[i] = "G";
+            }
+            if (string[i].equals("A")){
+                string[i]  = "T";
+            }
+            if (string[i].equals("T")){
+                string[i] = "A";
+            }
+
+
+        }
+        return "hello";
     }
-
 
 //end of main class
 }
