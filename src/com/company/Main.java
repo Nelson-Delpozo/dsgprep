@@ -1,11 +1,8 @@
 package com.company;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.lang.StringBuilder;
-import java.util.Locale;
 
 public class Main {
 
@@ -14,7 +11,8 @@ public class Main {
 //        reverseWords("<[] there is a light that never goes out");
 //        reverseWords2("<[] there is a light that never goes out");
 //        whoLikesIt("mike", "joe", "bobby", "stan");
-        System.out.println(toJadenCase("what is going on here"));
+//        System.out.println(toJadenCase("what is going on here"));
+        System.out.println(getXO("xooxXXohj"));
     }
 
     public static void reverseWords(final String original) {
@@ -119,19 +117,18 @@ public class Main {
     }
 
     public static boolean getXO (String str) {
-
-        ArrayList<String> x = new ArrayList<>();
+        str.toLowerCase();
+        String[] array =
+        System.out.println(array);
+        int countX = 0;
+        int countO = 0;
         ArrayList<String> o = new ArrayList<>();
-        String[] characters = str.split("");
-        for (String character : characters) {
-            if (character.toLowerCase() == "o") {
-                o.add(character);
-            } else if (character.toLowerCase() == "x") {
-                x.add(character);
-            }
+       for(int i = 0; i < str.length(); i++){
+//           System.out.println(str.charAt(i));
+           char x = str.charAt(i);
 
-        }
-        return (x.size() == o.size());
+       }
+       return false;
     }
 
 
