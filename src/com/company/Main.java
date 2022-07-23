@@ -16,7 +16,8 @@ public class Main {
 //        System.out.println(toJadenCase("what is going on here"));
 //        System.out.println(getXO("xooxXXoohj"));
 //        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
-        System.out.println(makeComplement("ATTGC"));
+//        System.out.println(makeComplement("ATTGC"));
+        System.out.println(isTriangle(1,2,2));
     }
 
     public static void reverseWords(final String original) {
@@ -184,7 +185,7 @@ public class Main {
 
     public static boolean isTriangle(int a, int b, int c){
 
-        return false;
+        return (((a + b) > c) && ((a + c) > b) && ((b + c) > a));
     }
 
 //end of main class
