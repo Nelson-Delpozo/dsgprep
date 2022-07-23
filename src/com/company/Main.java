@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.lang.StringBuilder;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -14,7 +16,8 @@ public class Main {
 //        reverseWords2("<[] there is a light that never goes out");
 //        whoLikesIt("mike", "joe", "bobby", "stan");
 //        System.out.println(toJadenCase("what is going on here"));
-        System.out.println(getXO("xooxXXoohj"));
+//        System.out.println(getXO("xooxXXoohj"));
+        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
 
     }
 
@@ -136,10 +139,26 @@ public class Main {
 
     public static int[] arrayDiff(int[] a, int[] b) {
 
+       List<Integer> listA = new ArrayList<>();
+       List<Integer> listB = new ArrayList<>();
+
+       for(int num : a){
+           listA.add(num);
+       }
+       for(int num : b){
+           listB.add(num);
+       }
+
+       listA.removeAll(listB);
+       int[] result = new int[listA.size()];
+
+       for(int i = 0; i < listA.size(); i++){
+           result[i] = listA.get(i);
+       }
 
 
 
-        return a;
+            return result;
     }
 
 
