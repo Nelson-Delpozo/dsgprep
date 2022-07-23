@@ -12,7 +12,7 @@ public class Main {
 //        reverseWords2("<[] there is a light that never goes out");
 //        whoLikesIt("mike", "joe", "bobby", "stan");
 //        System.out.println(toJadenCase("what is going on here"));
-        System.out.println(getXO("xooxXXohj"));
+        System.out.println(getXO("xooxXXoohj"));
     }
 
     public static void reverseWords(final String original) {
@@ -98,10 +98,10 @@ public class Main {
     }
 
     public static String toJadenCase(String phrase) {
-        if(phrase == null){
+        if (phrase == null) {
             return null;
         }
-        if(phrase == ""){
+        if (phrase.equals("")) {
             return null;
         }
 
@@ -116,26 +116,19 @@ public class Main {
         return (String.join(" ", words));
     }
 
-    public static boolean getXO (String str) {
-        str.toLowerCase();
-        String[] array =
-        System.out.println(array);
+    public static boolean getXO(String str) {
+        String small = str.toLowerCase();
         int countX = 0;
         int countO = 0;
-        ArrayList<String> o = new ArrayList<>();
-       for(int i = 0; i < str.length(); i++){
-//           System.out.println(str.charAt(i));
-           char x = str.charAt(i);
-
-       }
-       return false;
+        for(int i = 0; i < small.length(); i++){
+            if(small.charAt(i) =='o'){
+                countO += 1;
+            }else if(small.charAt(i) == 'x'){
+                countX += 1;
+            }
+        }
+        return  countO == countX;
     }
-
-
-
-
-
-
 
 
 //end of main class
