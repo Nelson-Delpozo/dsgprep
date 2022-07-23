@@ -182,5 +182,10 @@ public class Main {
         return String.join("", string);
     }
 
+    public static boolean isTriangle(int a, int b, int c){
+
+        return false;
+    }
+
 //end of main class
 }
