@@ -164,20 +164,22 @@ public class Main {
 
             if (string[i].equals("G")){
                 string[i] = "C";
+                continue;
             }
             if (string[i].equals("C")){
                 string[i] = "G";
+                continue;
             }
             if (string[i].equals("A")){
                 string[i]  = "T";
+                continue;
             }
             if (string[i].equals("T")){
                 string[i] = "A";
+
             }
-
-
         }
-        return "hello";
+        return String.join("", string);
     }
 
 //end of main class
