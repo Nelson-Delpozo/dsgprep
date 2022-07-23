@@ -157,6 +157,11 @@ public class Main {
        return result;
     }
 
+    public static String makeComplement(String dna) {
+
+
+    }
+
 
 //end of main class
 }
