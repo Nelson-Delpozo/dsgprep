@@ -1,8 +1,10 @@
 package com.company;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.lang.StringBuilder;
+import java.util.List;
 
 public class Main {
 
@@ -13,6 +15,7 @@ public class Main {
 //        whoLikesIt("mike", "joe", "bobby", "stan");
 //        System.out.println(toJadenCase("what is going on here"));
         System.out.println(getXO("xooxXXoohj"));
+
     }
 
     public static void reverseWords(final String original) {
@@ -120,22 +123,24 @@ public class Main {
         String small = str.toLowerCase();
         int countX = 0;
         int countO = 0;
-        for(int i = 0; i < small.length(); i++){
-            if(small.charAt(i) =='o'){
+        for (int i = 0; i < small.length(); i++) {
+            if (small.charAt(i) == 'o') {
                 countO += 1;
-            }else if(small.charAt(i) == 'x'){
+            } else if (small.charAt(i) == 'x') {
                 countX += 1;
             }
         }
-        return  countO == countX;
+        return countO == countX;
     }
 
 
     public static int[] arrayDiff(int[] a, int[] b) {
-        // Your code here
+
+
+
+
         return a;
     }
-
 
 
 //end of main class
