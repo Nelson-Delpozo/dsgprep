@@ -22,7 +22,7 @@ public class Main {
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(pigIt("Pig latin is cool"));
 //        System.out.println(makeReadable(86399));
-            System.out.println(solution(new int[]{1,2,3,-5}));
+        System.out.println(solution(new int[]{1, 2, 3, -5}));
 
     }
 
@@ -169,19 +169,19 @@ public class Main {
 
         for (int i = 0; i < string.length; i++) {
 
-            if (string[i].equals("G")){
+            if (string[i].equals("G")) {
                 string[i] = "C";
                 continue;
             }
-            if (string[i].equals("C")){
+            if (string[i].equals("C")) {
                 string[i] = "G";
                 continue;
             }
-            if (string[i].equals("A")){
-                string[i]  = "T";
+            if (string[i].equals("A")) {
+                string[i] = "T";
                 continue;
             }
-            if (string[i].equals("T")){
+            if (string[i].equals("T")) {
                 string[i] = "A";
 
             }
@@ -189,14 +189,14 @@ public class Main {
         return String.join("", string);
     }
 
-    public static boolean isTriangle(int a, int b, int c){
+    public static boolean isTriangle(int a, int b, int c) {
 
         return (((a + b) > c) && ((a + c) > b) && ((b + c) > a));
     }
 
     public static int ConvertBinaryArrayToInt(List<Integer> binary) {
         StringBuilder string = new StringBuilder();
-        for(int num : binary){
+        for (int num : binary) {
             string.append(num);
         }
         return Integer.parseInt(String.valueOf(string), 2);
@@ -211,9 +211,9 @@ public class Main {
 
         String[] array = str.split(" ");
         StringJoiner result = new StringJoiner(" ");
-        for(String word : array){
+        for (String word : array) {
 
-            String newWord = String.format("%s%say",word.substring(1), word.charAt(0));
+            String newWord = String.format("%s%say", word.substring(1), word.charAt(0));
             result.add(newWord);
 
         }
@@ -229,15 +229,28 @@ public class Main {
         return String.format("%d:%d:%d", hours, minutes, remainder);
     }
 
-    public static ArrayList<Integer> solution(int[] A) {
+    public static int solution(int[] A) {
         ArrayList<Integer> positives = new ArrayList<>();
-        for(int num : A){
-            if(num > 0){
+        for (int num : A) {
+            if (num > 0) {
                 positives.add(num);
             }
         }
-        return positives;
+        Collections.sort(positives);
+        for (int i = 0; i < positives.size(); i++) {
+
+            boolean missing = true;
+            for (int j = 0; j < positives.size; j++) {
+                if (A[j] == i) {
+                    missing = false;
+                    break;
+                }
+            }
+
+        }
+        return 5;
     }
+
 
 //end of main class
 }
