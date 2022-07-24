@@ -5,6 +5,7 @@ import java.lang.StringBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
+import java.util.Collections;
 
 public class Main {
 
@@ -229,7 +230,32 @@ public class Main {
         return String.format("%d:%d:%d", hours, minutes, remainder);
     }
 
-    public static void solution(int[] A) {
+//    public static void solution(int[] A) {
+//        ArrayList<Integer> positives = new ArrayList<>();
+//        for (int num : A) {
+//            if (num > 0) {
+//                positives.add(num);
+//            }
+//        }
+//        Collections.sort(positives);
+//
+//        for (int i = 1; i < 1000000; i++) {
+//
+//            boolean missing = true;
+//            for (int j = 0; j < positives.size(); j++) {
+//                if (positives.get(j) == i) {
+//                    missing = false;
+//                    break;
+//                }
+//            }
+//            if (missing == true) {
+//                System.out.println(i);
+//                break;
+//            }
+//        }
+//    }
+
+    public int solution(int[] A) {
         ArrayList<Integer> positives = new ArrayList<>();
         for (int num : A) {
             if (num > 0) {
@@ -248,10 +274,11 @@ public class Main {
                 }
             }
             if (missing == true) {
-                System.out.println(i);
-                break;
+                return(i);
+
             }
         }
+        return 1;
     }
 
 
