@@ -5,6 +5,7 @@ import java.util.*;
 import java.lang.StringBuilder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class Main {
 
@@ -212,8 +213,9 @@ public class Main {
         StringJoiner result = new StringJoiner(" ");
         for(String word : array){
 
-            String newWord = word.substring(1) + word.charAt(0) + "ay";
+            String newWord = String.format("%s%say",word.substring(1), word.charAt(0));
             result.add(newWord);
+
         }
 
         return result.toString();
