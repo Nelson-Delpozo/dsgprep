@@ -205,7 +205,15 @@ public class Main {
 
     public static String pigIt(String str) {
 
-        return "hello";
+        String[] array = str.split(" ");
+        StringBuilder result = new StringBuilder();
+        for(String word : array){
+
+            String newWord = word.substring(1) + word.charAt(0) + "ay";
+            result.append(newWord);
+        }
+
+        return result.toString();
     }
 
 
