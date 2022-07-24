@@ -19,7 +19,10 @@ public class Main {
 //        System.out.println(makeComplement("ATTGC"));
 //        System.out.println(isTriangle(1,2,2));
 //        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
-        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
+//        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
+        System.out.println(pigIt("Pig latin is cool"));
+
+
     }
 
     public static void reverseWords(final String original) {
@@ -209,7 +212,7 @@ public class Main {
         StringBuilder result = new StringBuilder();
         for(String word : array){
 
-            String newWord = word.substring(1) + word.charAt(0) + "ay";
+            String newWord = word.substring(1) + word.charAt(0) + "ay ";
             result.append(newWord);
         }
 
