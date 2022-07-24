@@ -188,5 +188,13 @@ public class Main {
         return (((a + b) > c) && ((a + c) > b) && ((b + c) > a));
     }
 
+    public static int ConvertBinaryArrayToInt(List<Integer> binary) {
+        StringBuilder string = new StringBuilder();
+        for(int num : binary){
+            string.append(num);
+        }
+        return Integer.parseInt(String.valueOf(string), 2);
+    }
+
 //end of main class
 }
