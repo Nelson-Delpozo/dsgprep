@@ -221,6 +221,11 @@ public class Main {
         return result.toString();
     }
 
+    public static String makeReadable(int seconds) {
+        // Do something
+        return Integer.toString(seconds);
+    }
+
 
 
 //end of main class
