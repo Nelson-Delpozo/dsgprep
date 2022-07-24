@@ -209,11 +209,11 @@ public class Main {
     public static String pigIt(String str) {
 
         String[] array = str.split(" ");
-        StringBuilder result = new StringBuilder();
+        StringJoiner result = new StringJoiner(" ");
         for(String word : array){
 
-            String newWord = word.substring(1) + word.charAt(0) + "ay ";
-            result.append(newWord);
+            String newWord = word.substring(1) + word.charAt(0) + "ay";
+            result.add(newWord);
         }
 
         return result.toString();
