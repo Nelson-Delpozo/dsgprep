@@ -17,7 +17,8 @@ public class Main {
 //        System.out.println(getXO("xooxXXoohj"));
 //        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
 //        System.out.println(makeComplement("ATTGC"));
-        System.out.println(isTriangle(1,2,2));
+//        System.out.println(isTriangle(1,2,2));
+        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
     }
 
     public static void reverseWords(final String original) {
