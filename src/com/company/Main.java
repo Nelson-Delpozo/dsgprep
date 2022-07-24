@@ -22,7 +22,7 @@ public class Main {
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(pigIt("Pig latin is cool"));
 //        System.out.println(makeReadable(86399));
-        System.out.println(solution(new int[]{1, 2, 3, -5}));
+        solution(new int[]{1, 2, 3, 4, 5, -5});
 
     }
 
@@ -229,7 +229,7 @@ public class Main {
         return String.format("%d:%d:%d", hours, minutes, remainder);
     }
 
-    public static int solution(int[] A) {
+    public static void solution(int[] A) {
         ArrayList<Integer> positives = new ArrayList<>();
         for (int num : A) {
             if (num > 0) {
@@ -237,18 +237,21 @@ public class Main {
             }
         }
         Collections.sort(positives);
-        for (int i = 0; i < positives.size(); i++) {
+
+        for (int i = 1; i < 1000000; i++) {
 
             boolean missing = true;
-            for (int j = 0; j < positives.size; j++) {
-                if (A[j] == i) {
+            for (int j = 0; j < positives.size(); j++) {
+                if (positives.get(j) == i) {
                     missing = false;
                     break;
                 }
             }
-
+            if (missing == true) {
+                System.out.println(i);
+                break;
+            }
         }
-        return 5;
     }
 
 
