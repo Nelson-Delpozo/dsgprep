@@ -18,7 +18,8 @@ public class Main {
 //        System.out.println(Arrays.toString(arrayDiff(new int[]{1, 2}, new int[]{1})));
 //        System.out.println(makeComplement("ATTGC"));
 //        System.out.println(isTriangle(1,2,2));
-        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
+//        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
+        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
     }
 
     public static void reverseWords(final String original) {
@@ -199,7 +200,7 @@ public class Main {
 
     public static String createPhoneNumber(int[] numbers) {
 
-        String phoneNumber = String.format("(%d%d%d) " + "%d%d%d-%d%d%d%d", numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0]);
+        String phoneNumber = String.format("(%d%d%d) " + "%d%d%d-%d%d%d%d", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
         return phoneNumber;
     }
 
