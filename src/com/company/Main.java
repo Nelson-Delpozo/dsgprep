@@ -21,7 +21,8 @@ public class Main {
 //        System.out.println(isTriangle(1,2,2));
 //        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
-        System.out.println(pigIt("Pig latin is cool"));
+//        System.out.println(pigIt("Pig latin is cool"));
+        System.out.println(makeReadable(86399));
 
 
     }
