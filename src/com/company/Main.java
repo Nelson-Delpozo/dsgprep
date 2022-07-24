@@ -222,8 +222,11 @@ public class Main {
     }
 
     public static String makeReadable(int seconds) {
-        // Do something
-        return Integer.toString(seconds);
+        int hours = (int) Math.floor(seconds / 360);
+        int minutes = (int) Math.floor((seconds - hours) / 60);
+        int remainder = seconds - hours - minutes;
+
+        return String.format("%d:%d:%d", hours, minutes, remainder);
     }
 
 
