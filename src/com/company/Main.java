@@ -197,5 +197,16 @@ public class Main {
         return Integer.parseInt(String.valueOf(string), 2);
     }
 
+    public static String createPhoneNumber(int[] numbers) {
+
+        String phoneNumber = String.format("(%d%d%d) " + "%d%d%d-%d%d%d%d", numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0], numbers[0]);
+        return phoneNumber;
+    }
+
+
+
+
+
+
 //end of main class
 }
