@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.Array;
 import java.util.*;
 import java.lang.StringBuilder;
 import java.util.ArrayList;
@@ -22,8 +21,8 @@ public class Main {
 //        System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,0,0,1))));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(pigIt("Pig latin is cool"));
-        System.out.println(makeReadable(86399));
-
+//        System.out.println(makeReadable(86399));
+            System.out.println(solution(new int[]{1,2,3,-5}));
 
     }
 
@@ -230,7 +229,15 @@ public class Main {
         return String.format("%d:%d:%d", hours, minutes, remainder);
     }
 
-
+    public static ArrayList<Integer> solution(int[] A) {
+        ArrayList<Integer> positives = new ArrayList<>();
+        for(int num : A){
+            if(num > 0){
+                positives.add(num);
+            }
+        }
+        return positives;
+    }
 
 //end of main class
 }
