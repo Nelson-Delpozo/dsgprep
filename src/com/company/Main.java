@@ -283,22 +283,133 @@ public class Main {
 
     ///Codility starts here////
 
-//    public String solution(String S, int K) {
-//        // write your code in Java SE 11
-//        ArrayList<String> days = new ArrayList<>();
-//        days.add("Mon");
-//        days.add("Tue");
-//        days.add("Wed");
-//        days.add("Thu");
-//        days.add("Fri");
-//        days.add("Sat");
-//        days.add("Sun");
-//
-//        for(int i = 0; i < days.size(); i++){
-//            if(S.equals(days.get(i))){
-//
-//            }
-//        }
+    public String solution(String S, int K) {
+        // write your code in Java SE 11
+        ArrayList<String> days = new ArrayList<>();
+        days.add("Mon");
+        days.add("Tue");
+        days.add("Wed");
+        days.add("Thu");
+        days.add("Fri");
+        days.add("Sat");
+        days.add("Sun");
+        int gap = K % 7;
+        String start = days.get(days.indexOf(S));
+
+        if (gap == 0) {
+            return S;
+        }
+
+        switch (start) {
+            case "Mon":
+                if (gap == 1) {
+                    return "Tue";
+                } else if (gap == 2) {
+                    return "Wed";
+                } else if (gap == 3) {
+                    return "Thur";
+                } else if (gap == 4) {
+                    return "Fri";
+                } else if (gap == 5) {
+                    return "Sat";
+                } else if (gap == 6) {
+                    return "Sun";
+                }
+                break;
+            case "Tue":
+                if (gap == 1) {
+                    return "Wed";
+                } else if (gap == 2) {
+                    return "Thu";
+                } else if (gap == 3) {
+                    return "Fri";
+                } else if (gap == 4) {
+                    return "Sat";
+                } else if (gap == 5) {
+                    return "Sun";
+                } else if (gap == 6) {
+                    return "Mon";
+                }
+                break;
+            case "Wed":
+                if (gap == 1) {
+                    return "Thu";
+                } else if (gap == 2) {
+                    return "Fri";
+                } else if (gap == 3) {
+                    return "Sat";
+                } else if (gap == 4) {
+                    return "Sun";
+                } else if (gap == 5) {
+                    return "Mon";
+                } else if (gap == 6) {
+                    return "Tue";
+                }
+                break;
+            case "Thu":
+                if (gap == 1) {
+                    return "Fri";
+                } else if (gap == 2) {
+                    return "Sat";
+                } else if (gap == 3) {
+                    return "Sun";
+                } else if (gap == 4) {
+                    return "Mon";
+                } else if (gap == 5) {
+                    return "Tue";
+                } else if (gap == 6) {
+                    return "Wed";
+                }
+                break;
+            case "Fri":
+                if (gap == 1) {
+                    return "Sat";
+                } else if (gap == 2) {
+                    return "Sun";
+                } else if (gap == 3) {
+                    return "Mon";
+                } else if (gap == 4) {
+                    return "Tue";
+                } else if (gap == 5) {
+                    return "Wed";
+                } else if (gap == 6) {
+                    return "Thu";
+                }
+                break;
+            case "Sat":
+                if (gap == 1) {
+                    return "Sun";
+                } else if (gap == 2) {
+                    return "Mon";
+                } else if (gap == 3) {
+                    return "Tue";
+                } else if (gap == 4) {
+                    return "Wed";
+                } else if (gap == 5) {
+                    return "Thu";
+                } else if (gap == 6) {
+                    return "Fri";
+                }
+                break;
+            case "Sun":
+                if (gap == 1) {
+                    return "Mon";
+                } else if (gap == 2) {
+                    return "Tue";
+                } else if (gap == 3) {
+                    return "Wed";
+                } else if (gap == 4) {
+                    return "Thu";
+                } else if (gap == 5) {
+                    return "Fri";
+                } else if (gap == 6) {
+                    return "Sat";
+                }
+                break;
+        }
+
+        return S;
+    }
 
     public String[] solution(int X) {
         String result = "";
