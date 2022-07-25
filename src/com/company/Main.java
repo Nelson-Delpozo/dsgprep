@@ -23,7 +23,7 @@ public class Main {
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(pigIt("Pig latin is cool"));
 //        System.out.println(makeReadable(86399));
-        solution(new int[]{1, 2, 3, 4, 5, -5});
+//        solution(new int[]{1, 2, 3, 4, 5, -5});
 
     }
 
@@ -274,11 +274,49 @@ public class Main {
                 }
             }
             if (missing == true) {
-                return(i);
+                return (i);
 
             }
         }
         return 1;
+    }
+
+    ///Codility starts here////
+
+//    public String solution(String S, int K) {
+//        // write your code in Java SE 11
+//        ArrayList<String> days = new ArrayList<>();
+//        days.add("Mon");
+//        days.add("Tue");
+//        days.add("Wed");
+//        days.add("Thu");
+//        days.add("Fri");
+//        days.add("Sat");
+//        days.add("Sun");
+//
+//        for(int i = 0; i < days.size(); i++){
+//            if(S.equals(days.get(i))){
+//
+//            }
+//        }
+
+    public String[] solution(int X) {
+        String result = "";
+        int a = 0, b = 1, c;
+        if (X == 0)
+            result = result + a;
+        for (int i = 2; i <= X; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            result = result + b;
+        }
+//        result = result + b;
+
+
+        String[] newStr = result.split(",");
+        return newStr;
+
     }
 
 
